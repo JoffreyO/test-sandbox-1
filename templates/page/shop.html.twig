@@ -1,0 +1,10 @@
+<section>
+    <div class="container px-4 px-lg-5 mt-3">
+        {% include('components/filter.html.twig') with { 'categories': categories ?? [] } %}
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            {% for product in products ?? [] %}
+                {% include('components/product.html.twig') with {'product': product } %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
